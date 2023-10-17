@@ -4,7 +4,9 @@
 
 * [Introduction](Introduction)
 * [Installation](Installation)
+* [Execution](Execution)
 * [Testing](Testing)
+* [Documentation](Documentation)
 * [Authors](Authors)
 
 ## Introduction
@@ -29,9 +31,77 @@ Switch to the `AirBnB` directory and run:
 ```bash
 ./console.py
 ```
+## Execution
+In interactive mode
+
+
+```bash
+$ ./console.py
+(hbnb) help
+
+Documented commands (type help <topic>):
+========================================
+EOF  help  quit
+
+(hbnb)
+(hbnb)
+(hbnb) quit
+$
+```
+
+in Non-interactive mode
+
+```bash
+$ echo "help" | ./console.py
+(hbnb)
+
+Documented commands (type help <topic>):
+========================================
+EOF  help  quit
+(hbnb)
+$
+$ cat test_help
+help
+$
+$ cat test_help | ./console.py
+(hbnb)
+
+Documented commands (type help <topic>):
+========================================
+EOF  help  quit
+(hbnb)
+$
+```
+
 ## Testing
 
 All the tests are stored in the `tests` directory
+
+## Documentation
+* Modules:
+
+```python
+python3 -c 'print(__import__("my_module").__doc__)'
+```
+
+* Classes:
+
+```python
+python3 -c 'print(__import__("my_module").MyClass.__doc__)'
+```
+
+* Functions (inside and outside a class):
+
+```python
+python3 -c 'print(__import__("my_module").my_function.__doc__)'
+```
+
+and
+
+```python
+python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
+```
+
 
 ## Authors
 <details>
